@@ -1,4 +1,4 @@
-package com.yash.future;
+package com.yash.concurrent.future;
 
 import java.util.concurrent.*;
 

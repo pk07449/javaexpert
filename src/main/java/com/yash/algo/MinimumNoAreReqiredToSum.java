@@ -1,4 +1,4 @@
-package com.yash.inteview.algo;
+package com.yash.algo;
 
 /**
  * Created by pankaj on 2/12/2017.

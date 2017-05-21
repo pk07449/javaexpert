@@ -1,7 +1,6 @@
-package com.yash.future.interviewquestion.altematik.siemes;
+package com.yash.concurrent;
 
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Map;
 

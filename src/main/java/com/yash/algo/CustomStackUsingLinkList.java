@@ -1,4 +1,4 @@
-package com.yash.inteview.algo;
+package com.yash.algo;
 
 import java.util.Stack;
 

@@ -1,4 +1,4 @@
-package com.yash.future.interviewquestion.altematik;
+package com.yash.algo;
 
 import java.util.Stack;
 
