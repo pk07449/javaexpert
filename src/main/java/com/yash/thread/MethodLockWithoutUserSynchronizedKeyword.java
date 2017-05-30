@@ -11,11 +11,11 @@ public class MethodLockWithoutUserSynchronizedKeyword {
     public static void main(String[] args) {
 
         Hello hello = new Hello();
-        Thread1 thread1 = new Thread1("t1", hello);
-        Thread1 thread2 = new Thread1("t2", hello);
-        Thread1 thread3 = new Thread1("t3", hello);
-        Thread1 thread4 = new Thread1("t4", hello);
-        Thread1 thread5 = new Thread1("t5", hello);
+        Thread1 thread1 = new Thread1("t1", hello,"t1");
+        Thread1 thread2 = new Thread1("t2", hello,"t1");
+        Thread1 thread3 = new Thread1("t3", hello,"t1");
+        Thread1 thread4 = new Thread1("t4", hello,"t1");
+        Thread1 thread5 = new Thread1("t5", hello,"t1");
 
         thread1.start();
         thread2.start();
@@ -27,7 +27,7 @@ public class MethodLockWithoutUserSynchronizedKeyword {
     static class Hello {
         private Lock lock = new ReentrantLock();
 
-        void m1() {
+        void m1(String userName) {
 
             lock.lock();
             String threadName = Thread.currentThread().getName();
@@ -44,14 +44,17 @@ public class MethodLockWithoutUserSynchronizedKeyword {
     static class Thread1 extends Thread {
 
         private final Hello resource;
+        private final String userName;
 
-        public Thread1(String name, Hello resource) {
+        public Thread1(String name, Hello resource,String userName) {
             super(name);
             this.resource = resource;
+            this.userName = userName;
+
         }
 
         public void run() {
-            resource.m1();
+            resource.m1(userName);
         }
     }
 

@@ -1,5 +1,6 @@
 package com.yash.spring.ioc;
 
+import com.yash.spring.ioc.component.HelloComponenetImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -14,6 +15,7 @@ public class Test {
     public static void main(String[] args) {
 
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        System.out.println(context.getBean(HelloComponenetImpl.class).getName());
 
     }
 }

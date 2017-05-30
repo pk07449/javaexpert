@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
  * Created by pankaj on 2/27/2017.
  */
 @Configuration
-@ComponentScan("com.yash.spring.ioc.service")
+@ComponentScan("com.yash.spring.ioc")
 public class AppConfig {
 
 }
