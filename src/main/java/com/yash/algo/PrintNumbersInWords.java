@@ -11,9 +11,7 @@ public class PrintNumbersInWords {
 
     public static void main(String[] args) {
 
-        String numbers = "132562";
-
-        convertNumberToWord(numbers,100000,"");
+        System.out.println(convertNumberToWord("132562",100000,""));
     }
 
     private static Map<String,String> getNumberTypes() {
@@ -53,19 +51,21 @@ public class PrintNumbersInWords {
         return numbersTypes;
     }
 
-    private static void convertNumberToWord(String number,int upto,String word) {
+    private static String convertNumberToWord(String number,int upto,String word) {
         if(number.length() < upto) {
             if(number.length() == 2) {
                 word += " "+getNumberTypes().get(""+(Integer.parseInt(number)/10)*10) + getNumberTypes().get(""+Integer.parseInt(number)%10);
             } else {
-
-                word += " "+ getNumberTypes().get(""+number.charAt(0)) + (getNumberTypes().get(""+upto) == null ?"-" :getNumberTypes().get(""+upto)) ;
+                if(getNumberTypes().get(""+upto) == null){
+                    word += " "+ getNumberTypes().get(""+Integer.parseInt(""+number.charAt(0))*10);
+                } else {
+                    word += " "+ getNumberTypes().get(""+number.charAt(0)) + (getNumberTypes().get(""+upto) == null ?"-" :getNumberTypes().get(""+upto)) ;
+                }
             }
-
-
-            System.out.println(word);
-            convertNumberToWord(number.substring(1),upto/10,word);
+            return  convertNumberToWord(number.substring(1),upto/10,word);
     }
+
+    return word;
 
 
 }}
