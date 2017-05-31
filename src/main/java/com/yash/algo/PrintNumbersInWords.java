@@ -10,7 +10,6 @@ public class PrintNumbersInWords {
 
 
     public static void main(String[] args) {
-
         System.out.println(convertNumberToWord("132562",100000,""));
     }
 
@@ -51,24 +50,31 @@ public class PrintNumbersInWords {
         return numbersTypes;
     }
 
-    private static String convertNumberToWord(String number,int upto,String word) {
-        if(number.length() < upto) {
-            if (number.length() != 2) {
-                if(getNumberTypes().get(""+upto) == null){
-                    word += " "+ getNumberTypes().get(""+Integer.parseInt(""+number.charAt(0))*10);
-                } else {
-                    word += " "+ getNumberTypes().get(""+number.charAt(0)) + getNumberTypes().get(""+upto) ;
-                }
-            } else {
-                word = handlingToPrintLastTwoDigit(number, word);
-            }
-            return  convertNumberToWord(number.substring(1),upto/10,word);
+    private static String convertNumberToWord(String number,int supportNumberToBePrintUpto,String wordToPrint) {
+        if(number.length() < supportNumberToBePrintUpto) {
+            String updatedWordToPrint = isRemaingNumberApartFromGreaterThanTwo(number) ?
+                    handlingToPrintApartFromLastTwoDigit(number, supportNumberToBePrintUpto, wordToPrint) :
+                    handlingToPrintLastTwoDigit(number, wordToPrint);
+            return  convertNumberToWord(number.substring(1),supportNumberToBePrintUpto/10,updatedWordToPrint);
     }
 
-    return word;
+    return wordToPrint;
 
 
 }
+
+    private static boolean isRemaingNumberApartFromGreaterThanTwo(String number) {
+        return number.length() != 2;
+    }
+
+    private static String handlingToPrintApartFromLastTwoDigit(String number, int upto, String word) {
+        if(getNumberTypes().get(""+upto) == null){
+            word += " "+ getNumberTypes().get(""+Integer.parseInt(""+number.charAt(0))*10);
+        } else {
+            word += " "+ getNumberTypes().get(""+number.charAt(0)) + getNumberTypes().get(""+upto) ;
+        }
+        return word;
+    }
 
     private static String handlingToPrintLastTwoDigit(String number, String word) {
         word += " "+getNumberTypes().get(""+(Integer.parseInt(number)/10)*10) + getNumberTypes().get(""+Integer.parseInt(number)%10);
