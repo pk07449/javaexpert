@@ -53,14 +53,14 @@ public class PrintNumbersInWords {
 
     private static String convertNumberToWord(String number,int upto,String word) {
         if(number.length() < upto) {
-            if(number.length() == 2) {
-                word += " "+getNumberTypes().get(""+(Integer.parseInt(number)/10)*10) + getNumberTypes().get(""+Integer.parseInt(number)%10);
-            } else {
+            if (number.length() != 2) {
                 if(getNumberTypes().get(""+upto) == null){
                     word += " "+ getNumberTypes().get(""+Integer.parseInt(""+number.charAt(0))*10);
                 } else {
-                    word += " "+ getNumberTypes().get(""+number.charAt(0)) + (getNumberTypes().get(""+upto) == null ?"-" :getNumberTypes().get(""+upto)) ;
+                    word += " "+ getNumberTypes().get(""+number.charAt(0)) + getNumberTypes().get(""+upto) ;
                 }
+            } else {
+                word = handlingToPrintLastTwoDigit(number, word);
             }
             return  convertNumberToWord(number.substring(1),upto/10,word);
     }
@@ -68,4 +68,10 @@ public class PrintNumbersInWords {
     return word;
 
 
-}}
+}
+
+    private static String handlingToPrintLastTwoDigit(String number, String word) {
+        word += " "+getNumberTypes().get(""+(Integer.parseInt(number)/10)*10) + getNumberTypes().get(""+Integer.parseInt(number)%10);
+        return word;
+    }
+}
