@@ -11,6 +11,8 @@ public class JDBCConnectionFactory {
     static {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
+
+
         } catch (ClassNotFoundException e) {
             System.err.println(e.getMessage());
         }
@@ -30,8 +32,10 @@ public class JDBCConnectionFactory {
             System.err.println("Problem is in creating exception " + e.getMessage());
             throw new RuntimeException("Problem is in creating exception");
         }
+    }
 
-
+    public static void main(String[] args) {
+        getConnection();
     }
 
 }
