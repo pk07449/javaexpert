@@ -6,25 +6,18 @@ package com.pnakaj.algo;
 public class PrimeNumber {
     public static void main(String[] args) {
 
-        int result = isPrime(16,2);
-
-        System.out.println(result );
+        System.out.println(isPrime(16,2));
     }
 
     private static int isPrime(int number, int i) {
-
         if(i<number){
             if(number%i!=0) {
                 return isPrime(number, ++i);
              } else {
                 return 0;
             }
-
-
         }
         return 1;
-
-
     }
 
 

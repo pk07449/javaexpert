@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Stream;
 
 /**
  * Created by pankaj on 4/9/2017.
@@ -11,8 +13,6 @@ import java.util.Map;
 public class FindDuplicateElementFromList {
 
     public static void main(String[] args) {
-
-
         List<String> list = new ArrayList();
         list.add("P");
         list.add("P");
@@ -20,14 +20,8 @@ public class FindDuplicateElementFromList {
         list.add("B");
 
         Map<String,Integer> map = new HashMap<String,Integer >();
-
         for (String s : list) {
-
-            if(map.containsKey(s)){
-                map.put(s, map.get(s)+1);
-            } else {
-                map.put(s,1);
-            }
+            map.put(s, map.containsKey(s) ? map.get(s) + 1 : 1);
         }
 
 

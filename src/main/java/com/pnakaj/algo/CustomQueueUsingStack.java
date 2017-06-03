@@ -5,7 +5,7 @@ import java.util.Stack;
 /**
  * Created by pankaj on 2/3/2017.
  */
-public class CustomQueueTest {
+public class CustomQueueUsingStack {
 
     public static void main(String[] args) {
 //       int i = 10;
@@ -19,6 +19,7 @@ public class CustomQueueTest {
         customQuee.push(40);
 
         System.out.println(customQuee.peek());
+
 
 //        PriorityQueue<Integer> priorityQueue = new PriorityQueue<Integer>();
 //        priorityQueue.offer(10);
