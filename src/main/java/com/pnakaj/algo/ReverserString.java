@@ -37,9 +37,7 @@ public class ReverserString {
             src[start] = src[end];
             src[end] = temp;
 
-            reverse(src, start + 1, end - 1);
-
-
+            reverse(src, ++start, --end);
         }
         return data;
     }

@@ -1,0 +1,5 @@
+# Type of GC Collector
+ 1. Serial  - Single Thread
+ 2. Parller
+ 3. CMS -  This algorithm uses multiple threads (“concurrent”) to scan through the heap (“mark”)
+            for unused objects that can be recycled (“sweep”).
