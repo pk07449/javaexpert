@@ -1,6 +1,7 @@
 package com.pnakaj.thread;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
@@ -15,6 +16,7 @@ import java.util.concurrent.ThreadPoolExecutor;
  */
 public class UserMultipleThreadWithTask {
 
+
     public static void main(String[] args) {
 
         ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
@@ -27,6 +29,8 @@ public class UserMultipleThreadWithTask {
         futures.add(executor.submit(() -> resource.task3(firstResult)));
         futures.add(executor.submit(() -> resource.task4(firstResult)));
         futures.add(executor.submit(() -> resource.task5(firstResult)));
+
+
 
 
         executor.shutdown();
