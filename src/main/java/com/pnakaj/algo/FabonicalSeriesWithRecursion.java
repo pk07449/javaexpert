@@ -6,13 +6,15 @@ package com.pnakaj.algo;
 public class FabonicalSeriesWithRecursion {
 
     public static void main(String[] args) {
-        generateFabonicalSeries(6,0,1);
+        generateFabonicalSeries(6,0,0);
     }
 
     private static void generateFabonicalSeries(int seriesNumberUpTo, int first,int second) {
         if(seriesNumberUpTo > 0) {
-            System.out.println(first+second);
-            generateFabonicalSeries(seriesNumberUpTo-1, second, first+second);
+            int x = second == 0 ? 1 : first + second;
+
+            System.out.println(x);
+            generateFabonicalSeries(seriesNumberUpTo-1, second, x);
         }
 
 
