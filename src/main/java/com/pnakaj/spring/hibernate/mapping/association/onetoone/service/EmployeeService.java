@@ -1,6 +1,6 @@
 package com.pnakaj.spring.hibernate.mapping.association.onetoone.service;
 
-import com.pnakaj.spring.hibernate.domain.Address;
+import com.pnakaj.spring.hibernate.mapping.association.onetoone.domain.Address;
 import com.pnakaj.spring.hibernate.mapping.association.onetoone.domain.Employee;
 import com.pnakaj.spring.hibernate.mapping.association.onetoone.repo.EmployeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
