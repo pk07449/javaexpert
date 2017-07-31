@@ -8,24 +8,16 @@ import java.util.stream.IntStream;
 /**
  * Created by pankaj on 7/30/2017.
  */
-public class ProducerConsumerUsingConcurrency {
+public class ProducerConsumerUsingCountdownLatch {
 
     public static void main(String[] args) {
-        Queue<Integer> queue = new LinkedList<>();
+
         CountDownLatch countDownLatch = new CountDownLatch(1);
-        ExecutorService executorService = Executors.newCachedThreadPool();
-        executorService.submit(new Consumer(countDownLatch,queue));
-        executorService.submit(new Consumer(countDownLatch,queue));
-        Future submit = executorService.submit(new Producer(countDownLatch,queue));
-        try {
-            Object o = submit.get();
-            System.out.println(o);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        }
+        Queue<Integer> queue = new LinkedList<>();
+        new Consumer(countDownLatch, queue).start();
+        new Producer(countDownLatch, queue).start();
     }
+
     static class Producer extends Thread {
 
         private final CountDownLatch countDownLatch;
@@ -61,7 +53,7 @@ public class ProducerConsumerUsingConcurrency {
 
     static class Consumer extends Thread {
 
-        private final CountDownLatch countDownLatch;
+        private final CountDownLatch CountDownLatch;
         private final Queue<Integer> queue;
 
         @Override
@@ -72,21 +64,21 @@ public class ProducerConsumerUsingConcurrency {
                 while (queue.size() == 0) {
                     try {
                         System.out.println("Consumer is waiting to be consumed");
-                        countDownLatch.await();
+                        CountDownLatch.await();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
 
 
-                System.out.println("Consumer consumed for index " + queue.poll());
-                countDownLatch.countDown();
+                    System.out.println("Consumer consumed for index " + queue.poll());
+                    CountDownLatch.countDown();
             });
         }
 
         public Consumer(CountDownLatch query, Queue<Integer> queue) {
             this.queue = queue;
-            this.countDownLatch = query;
+            this.CountDownLatch = query;
         }
     }
 
