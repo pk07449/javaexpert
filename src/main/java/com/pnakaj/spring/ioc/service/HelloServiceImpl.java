@@ -1,6 +1,7 @@
 package com.pnakaj.spring.ioc.service;
 
 import com.pnakaj.spring.security.global.service.HelloService;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 /**
@@ -8,9 +9,8 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-//@Primary
+@Primary
 public class HelloServiceImpl  implements HelloService{
-
     public HelloServiceImpl() {
         System.out.println("HelloServiceImpl Default Constructor");
     }
