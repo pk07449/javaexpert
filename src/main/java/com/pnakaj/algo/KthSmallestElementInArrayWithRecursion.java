@@ -1,5 +1,6 @@
 package com.pnakaj.algo;
 
+import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -28,7 +29,11 @@ public class KthSmallestElementInArrayWithRecursion {
 
     public static void main(String[] args) {
         int[] elements = { 1, 2, 10, 20, 40, 32, 44, 51, 6 };
-        System.out.println("4th smallest element:" + find(elements,4));
+        System.out.println("4th smallest element with recursion:" + find(elements,4));
+
+        Arrays.sort(elements);
+        System.out.println("4th smallest element with sorting:" + elements[3]);
+
 
     }
 }
