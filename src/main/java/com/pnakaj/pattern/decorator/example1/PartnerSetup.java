@@ -73,6 +73,9 @@ class Test {
         System.out.println(partnerSetup.getRelationShipType());
         System.out.println(new DealerPartnerSetupDecorator(partnerSetup).getRelationShipType());
         System.out.println(new CustomerPartnerSetupDecorator(partnerSetup).getRelationShipType());
+
+        // is used to modify the functionality of an object at runtime.
+        // At the same time other instances of the same class will not be affected by this,
     }
 }
 
