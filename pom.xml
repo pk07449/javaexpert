@@ -43,11 +43,11 @@
 
     <repositories>
         <repository>
-            <id>codelds</id>
+            <customerId>codelds</customerId>
             <url>https://code.lds.org/nexus/content/groups/main-repo</url>
         </repository>
         <repository>
-            <id>spring</id>
+            <customerId>spring</customerId>
             <url>http://central.maven.org/maven2/</url>
         </repository>
     </repositories>
