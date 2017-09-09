@@ -22,19 +22,14 @@ public class CustomerService {
 
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void saveEmployeeDetail() {
-
-        Customer customer = new Customer(null, "pankaj", "permanent", null);
-        customerRepo.saveEmployee(customer);
-
-
         Orders orders = new Orders(null, "Bihar", "DOS");
-        orders.setCustomer(customer);
-
         customerRepo.saveOrder(orders);
 
         Orders order1 = new Orders(null, "Bihar", "Patna");
-        order1.setCustomer(customer);
         customerRepo.saveOrder(order1);
+
+        Customer customer = new Customer(null, "pankaj", "permanent", new HashSet<>(Arrays.asList(order1, orders)));
+        customerRepo.saveEmployee(customer);
 
     }
 }

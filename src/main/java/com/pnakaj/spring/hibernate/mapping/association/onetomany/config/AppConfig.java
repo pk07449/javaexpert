@@ -49,7 +49,7 @@ public class AppConfig {
         hibernateProperties.put("hibernate.dialect", "org.hibernate.dialect.OracleDialect");
         hibernateProperties.put("hibernate.current_session_context_class", "thread");
         hibernateProperties.put("hibernate.show_sql", "true");
-        hibernateProperties.put("hibernate.hbm2ddl.auto", "update");
+        hibernateProperties.put("hibernate.hbm2ddl.auto", "create");
 
         localSessionFactoryBean.setHibernateProperties(hibernateProperties);
         return localSessionFactoryBean;
