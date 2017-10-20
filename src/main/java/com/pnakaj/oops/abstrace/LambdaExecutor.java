@@ -4,7 +4,7 @@ package com.pnakaj.oops.abstrace;
  * Created by pankaj on 4/13/2017.
  */
 public abstract class LambdaExecutor {
-    protected abstract void preProcess();
+
 
     final public void executeLambda() {
         preProcess();
@@ -12,8 +12,8 @@ public abstract class LambdaExecutor {
         postProcessor();
     }
 
+    protected abstract void preProcess();
     protected abstract void process();
-
-    abstract void postProcessor();
+    protected abstract void postProcessor();
 
 }

@@ -3,6 +3,7 @@ package com.pnakaj.spring.ioc.circularDependencySolution;
 //Unpublished Work © 2017 Deere & Company.
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -12,5 +13,9 @@ public class School {
 
     public College getCollege() {
         return college;
+    }
+
+    public School() {
+        System.out.println("School.School");
     }
 }
