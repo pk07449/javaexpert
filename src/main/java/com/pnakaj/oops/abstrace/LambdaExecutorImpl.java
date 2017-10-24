@@ -15,7 +15,7 @@ public class LambdaExecutorImpl extends LambdaExecutor {
         System.out.println("LambdaExecutorImpl.process");
     }
 
-    void postProcessor() {
+    public void postProcessor() {
         System.out.println("LambdaExecutorImpl.postProcessor");
 
     }
