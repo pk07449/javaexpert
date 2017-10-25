@@ -12,4 +12,9 @@
     <bean id="clientService"
           factory-bean="serviceLocator"
           factory-method="createClientServiceInstance"/>
+
+    <bean id="accountService"
+          factory-bean="serviceLocator"
+          factory-method="createAccountServiceInstance"/>
+
 </beans>

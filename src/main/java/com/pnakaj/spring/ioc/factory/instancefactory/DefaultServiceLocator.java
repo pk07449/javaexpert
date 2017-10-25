@@ -6,8 +6,13 @@ package com.pnakaj.spring.ioc.factory.instancefactory;
 
 public class DefaultServiceLocator {
     private static ClientService clientService = new ClientService();
+    private static AccountService accountService = new AccountService();
 
     public ClientService createClientServiceInstance() {
         return clientService;
+    }
+
+    public AccountService createAccountServiceInstance() {
+        return accountService;
     }
 }
