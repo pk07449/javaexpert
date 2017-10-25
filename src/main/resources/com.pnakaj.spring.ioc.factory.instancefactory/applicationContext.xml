@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- the factory bean, which contains a method called createInstance() -->
+    <bean id="serviceLocator" class="com.pnakaj.spring.ioc.factory.instancefactory.DefaultServiceLocator">
+        <!-- inject any dependencies required by this locator bean -->
+    </bean>
+
+    <!-- the bean to be created via the factory bean -->
+    <bean id="clientService"
+          factory-bean="serviceLocator"
+          factory-method="createClientServiceInstance"/>
+</beans>
