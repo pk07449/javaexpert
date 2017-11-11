@@ -50,7 +50,7 @@ public class UserMultipleThreadWithTask {
             System.out.println("Resource.task2 -- started");
 
             while (!future.isDone()) {
-                System.out.println("Task1 is not completed yet");
+                System.out.println("task2 Task1 is not completed yet");
             }
 
             System.out.println(future.get() + "  Resource.task2 -- Ended");
@@ -63,7 +63,7 @@ public class UserMultipleThreadWithTask {
             System.out.println("Resource.task3 -- started");
 
             while (!future.isDone()) {
-                System.out.println("Task1 is not completed yet");
+                System.out.println("task3 Task1 is not completed yet");
             }
 
             System.out.println(future.get() + "  Resource.task3 -- Ended");
@@ -75,7 +75,7 @@ public class UserMultipleThreadWithTask {
             System.out.println("Resource.task4 -- started");
 
             while (!future.isDone()) {
-                System.out.println("Task1 is not completed yet");
+                System.out.println("task4 Task1 is not completed yet");
             }
 
             System.out.println(future.get() + "  Resource.task4 -- Ended");
@@ -86,7 +86,7 @@ public class UserMultipleThreadWithTask {
             System.out.println("Resource.task5 -- started");
 
             while (!future.isDone()) {
-                System.out.println("Task1 is not completed yet");
+                System.out.println("task5 tTask1 is not completed yet");
             }
 
             System.out.println(future.get() + "  Resource.task5 -- Ended");

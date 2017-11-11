@@ -21,7 +21,7 @@ public class NonSerializedSuperClassTest {
 
     private static void deSerilized() {
         try {
-            System.out.println(new ObjectInputStream(new FileInputStream("c:\\test.json")).readObject());
+            System.out.println(new ObjectInputStream(new FileInputStream("d:\\test.json")).readObject());
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -32,7 +32,7 @@ public class NonSerializedSuperClassTest {
     private static void serilized(PermanentEmployee permanentEmployee) {
 
         try {
-            new ObjectOutputStream(new FileOutputStream("c:\\test.json")).writeObject(permanentEmployee);
+            new ObjectOutputStream(new FileOutputStream("d:\\test.json")).writeObject(permanentEmployee);
         } catch (IOException e) {
             e.printStackTrace();
         }

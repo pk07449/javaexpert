@@ -16,9 +16,7 @@ public class SyncronizedWithMethod {
 
 
         getThread.start();
-//        new GetThread(resource).start();
         postThread.start();
-//        new PostThread(resource).start();
         putThread.start();
         deletetThread.start();
 

@@ -13,19 +13,24 @@ public class NonSerilizedRefrenceClass {
         baseCustomer.setBaseId(100);
         PermanentCustomer permanentCustomer = new PermanentCustomer();
         permanentCustomer.setBaseCustomer(baseCustomer);
-
         permanentCustomer.setBaseLocation("Pune");
+
         System.out.println("Before Serilizaiton");
         serilized(permanentCustomer);
+
         System.out.println("Before Deseilizaiton");
-        baseCustomer.setBaseId(200);
+        baseCustomer.setBaseId(10000);
 
         deSerilized();
     }
 
     private static void deSerilized() {
         try {
-            System.out.println(new ObjectInputStream(new FileInputStream("c:\\test.json")).readObject());
+            FileInputStream in = new FileInputStream("d:\\test.json");
+            ObjectInputStream objectInputStream = new ObjectInputStream(in);
+            System.out.println(objectInputStream.readObject());
+            in.close();
+            objectInputStream.close();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -36,9 +41,16 @@ public class NonSerilizedRefrenceClass {
     private static void serilized(Object permanentEmployee) {
 
         try {
-            new ObjectOutputStream(new FileOutputStream("c:\\test.json")).writeObject(permanentEmployee);
+            FileOutputStream out = new FileOutputStream("d:\\test.json");
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(out);
+            objectOutputStream.writeObject(permanentEmployee);
+            out.close();
+            objectOutputStream.close();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+        finally {
+
         }
     }
 }
@@ -89,6 +101,10 @@ class PermanentCustomer implements Serializable {
 
     private void writeObject(java.io.ObjectOutputStream out)
             throws IOException{
+        System.out.println("WriteObject --start");
+        System.out.println(baseCustomer.getBaseId());
+        System.out.println(baseCustomer.getName());
+        System.out.println("WriteObject --end");
         out.writeInt(baseCustomer.getBaseId());
         out.writeObject(baseCustomer.getName());
     }
@@ -96,24 +112,18 @@ class PermanentCustomer implements Serializable {
     private void readObject(java.io.ObjectInputStream in)
             throws IOException {
         baseCustomer = new BaseCustomer();
-        baseCustomer.setId(in.readInt());
+        baseCustomer.setBaseId(in.readInt());
         try {
             baseCustomer.setName((String) in.readObject());
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-    }
 
-    class PermanentEmployeeInner {
-        int pId;
+        System.out.println("readObject --start");
+        System.out.println(baseCustomer.getBaseId());
+        System.out.println(baseCustomer.getName());
+        System.out.println("readObject --end");
 
-        public int getpId() {
-            return pId;
-        }
-
-        public void setpId(int pId) {
-            this.pId = pId;
-        }
     }
 
     public PermanentCustomer() {
