@@ -1,22 +1,27 @@
 package com.pnakaj.jdbc.factory;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Optional;
+
 /**
  * Created by pankaj on 2/24/2017.
  */
 public class JDBCTemplate {
-
 /*
-    private Triple<Triple<Connection, PreparedStatement,Optional<Tupple<ResultSet,JDBCRowMapper>>>> processRequest(Tupple<Connection, PreparedStatement> tupple) throws SQLException {
+    private Triple<Connection, PreparedStatement,Optional<Tupple<ResultSet>>> processRequest(Tupple<Connection, PreparedStatement> tupple) throws SQLException {
               tupple.getRight().executeUpdate();
-              return new Tupple<>(tupple.left, tupple.right, Optional.empty());
 
-    }
 
-    private Triple<Triple<Connection, PreparedStatement,Optional<Tupple<ResultSet,JDBCRowMapper>>> processRequestd(Triple<Connection, PreparedStatement,Optional<Tupple<ResultSet,JDBCRowMapper>>) throws SQLException {
+    }*/
+
+   /* private Triple<Triple<Connection, PreparedStatement,Optional<Tupple<ResultSet,JDBCRowMapper>>> processRequestd(Triple<Connection, PreparedStatement,Optional<Tupple<ResultSet,JDBCRowMapper>>) throws SQLException {
         ResultSet resultSet = tupple.getRight().executeQuery();
         return new Tupple<>(tupple.left, tupple.right,Optional.of(new Tupple<>(resultSet,mapper)));
 
-    }
+    }*/
 
 
     private Tupple<Connection, PreparedStatement> initilalization(String sql) throws SQLException {
@@ -41,12 +46,12 @@ public class JDBCTemplate {
     }
 
     public void processForCreateUpdateAndDelete(String sql) throws SQLException {
-        destroy(processRequest(initilalization(sql)));
+//        destroy(processRequest(initilalization(sql)));
     }
 
-    public void processForReterive(String sql,JDBCRowMapper rowMapper) throws SQLException {
-        destroy(processRequestForReterive(initilalization(sql),rowMapper));
-    }
+//    public void processForReterive(String sql,JDBCRowMapper rowMapper) throws SQLException {
+//        destroy(processRequestForReterive(initilalization(sql),rowMapper));
+//    }
 
     public void save(String sqlQuery) throws SQLException {
         processForCreateUpdateAndDelete(sqlQuery);
@@ -69,7 +74,6 @@ public class JDBCTemplate {
             return right;
         }
     }
-*/
 
 }
 

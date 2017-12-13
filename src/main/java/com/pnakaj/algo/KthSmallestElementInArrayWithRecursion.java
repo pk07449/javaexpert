@@ -16,23 +16,33 @@ public class KthSmallestElementInArrayWithRecursion {
             queue.offer(elements[i]);
         }
 
+
+
         return findKthSmallestElement(k, queue, -1);
     }
 
     private static int findKthSmallestElement(int k, Queue<Integer> queue, int dataToBeReturn) {
         if(k > 0) {
-            return findKthSmallestElement(--k, queue,queue.poll());
+            int k1 = --k;
+            System.out.println(k1);
+            System.out.println(queue);
+            Integer poll = queue.poll();
+            System.out.println("Pol "+ poll);
+
+            int kthSmallestElement = findKthSmallestElement(k1, queue, poll);
+            System.out.println(kthSmallestElement);
+            return kthSmallestElement;
         } else {
             return dataToBeReturn;
         }
     }
 
     public static void main(String[] args) {
-        int[] elements = { 1, 2, 10, 20, 40, 32, 44, 51, 6 };
+        int[] elements = { 15, 10, 20, 40, 3, 5, 3, 2, 32, 44, 51, 6 };
         System.out.println("4th smallest element with recursion:" + find(elements,4));
 
         Arrays.sort(elements);
-        System.out.println("4th smallest element with sorting:" + elements[3]);
+        System.out.println("4th smallest element with sorting:" + elements[0]);
 
 
     }

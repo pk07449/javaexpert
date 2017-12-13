@@ -27,11 +27,10 @@ public class BalancedCurleybrace {
                 default:
                     if (stack.isEmpty() || stack.peek() != data) {
                         return false;
+                    } else{
+                        stack.pop();
                     }
-                    stack.pop();
-
             }
-
         }
         return stack.isEmpty();
 
