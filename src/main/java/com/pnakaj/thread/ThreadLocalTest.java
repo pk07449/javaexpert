@@ -32,7 +32,7 @@ public class ThreadLocalTest {
 
        public void run() {
 
-           if(null != threadLocal.get() && threadLocal.get() == 1) {
+           if(null != threadLocal.get() ) {
                threadLocal.set(threadLocal.get().intValue()+1);
            } else {
                counter ++;

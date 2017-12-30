@@ -17,6 +17,7 @@ public class College {
     }
 
     public School getSchool() {
+        System.out.println("College.getSchool");
         return school;
     }
 }

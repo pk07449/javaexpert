@@ -35,7 +35,6 @@ public class ThreadLocalWithLocalContext {
             m4();
             m5();
         }
-
     }
 
     static class ThreadContext {

@@ -42,42 +42,52 @@ Answer :SQL> select address from employee GROUP BY ADDRESS HAVING count(address)
 
 ADDRESS
 --------------------------------------------------------------------------------
-
 PUNE
 GOA
 
 
 
-To fetch ALTERNATE records from a table. (EVEN NUMBERED)
-select * from emp where rowid in (select decode(mod(rownum,2),0,rowid, null) from emp);
+Question: To fetch ALTERNATE records from a table. (EVEN NUMBERED)
+Answer : select * from emp where rowid in (select decode(mod(rownum,2),0,rowid, null) from emp);
+
 To select ALTERNATE records from a table. (ODD NUMBERED)
-select * from emp where rowid in (select decode(mod(rownum,2),0,null ,rowid) from emp);
+Answer : select * from emp where rowid in (select decode(mod(rownum,2),0,null ,rowid) from emp);
+
 Find the 3rd MAX salary in the emp table.
 select distinct sal from emp e1 where 3 = (select count(distinct sal) from emp e2 where e1.sal <= e2.sal);
+
 Find the 3rd MIN salary in the emp table.
 select distinct sal from emp e1 where 3 = (select count(distinct sal) from emp e2where e1.sal >= e2.sal);
+
 Select FIRST n records from a table.
 select * from emp where rownum <= &n;
+
 Select LAST n records from a table
 select * from emp minus select * from emp where rownum <= (select count(*) - &n from emp);
+
 List dept no., Dept name for all the departments in which there are no employees in the department.
 select * from dept where deptno not in (select deptno from emp);
 alternate solution:  select * from dept a where not exists (select * from emp b where a.deptno = b.deptno);
 altertnate solution:  select empno,ename,b.deptno,dname from emp a, dept b where a.deptno(+) = b.deptno and empno is null;
+
 How to get 3 Max salaries ?
 select distinct sal from emp a where 3 >= (select count(distinct sal) from emp b where a.sal <= b.sal) order by a.sal desc;
+
 How to get 3 Min salaries ?
 select distinct sal from emp a  where 3 >= (select count(distinct sal) from emp b  where a.sal >= b.sal);
+
 How to get nth max salaries ?
 select distinct hiredate from emp a where &n =  (select count(distinct sal) from emp b where a.sal >= b.sal);
 Select DISTINCT RECORDS from emp table.
 select * from emp a where  rowid = (select max(rowid) from emp b where  a.empno=b.empno);
+
 How to delete duplicate rows in a table?
 delete from emp a where rowid != (select max(rowid) from emp b where  a.empno=b.empno);
+
 Count of number of employees in  department  wise.
 select count(EMPNO), b.deptno, dname from emp a, dept b  where a.deptno(+)=b.deptno  group by b.deptno,dname;
- Suppose there is annual salary information provided by emp table. How to fetch monthly salary of each and every employee?
 
+Suppose there is annual salary information provided by emp table. How to fetch monthly salary of each and every employee?
 select ename,sal/12 as monthlysal from emp;
 
 Select all record from emp table where deptno =10 or 40.

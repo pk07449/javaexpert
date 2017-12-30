@@ -18,4 +18,12 @@ public class AsyncTask {
 
         System.out.println("Count Student...end");
     }
+
+    public void m1() throws InterruptedException {
+        System.out.println("M1...start");
+
+        Thread.sleep(60000);
+
+        System.out.println("M1...end");
+    }
 }

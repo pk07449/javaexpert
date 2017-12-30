@@ -15,36 +15,37 @@ public class ThreadExchangerTest {
     static class Producer implements Runnable {
         private Exchanger<String> exchanger;
 
-        public void run() {
-            for (int i = 0; i < 10; i++) {
-                try {
-                    exchanger.exchange("" + i);
-                    System.out.println("producer -> " + i);
-                } catch (InterruptedException e) {
-                }
-            }
-        }
-
         public Producer(Exchanger<String> exchanger) {
             this.exchanger = exchanger;
         }
+
+        public void run() {
+            try {
+                System.out.println("Producer Send data -> ABCDEF");
+                System.out.println("Producer get Data ->" + exchanger.exchange("ABCDEF"));
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
+
 
     static class Consumer implements Runnable {
         private Exchanger<String> exchanger;
 
         public void run() {
-            for (int i = 0; i < 10; i++) {
-                try {
-                    System.out.println("consumer -> " + exchanger.exchange(""));
-                } catch (InterruptedException e) {
-                }
+            System.out.println("Consumer Send data -> 123456");
+            try {
+                System.out.println("Consumer get Data ->" + exchanger.exchange("123456"));
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
+
         }
 
         public Consumer(Exchanger<String> exchanger) {
             this.exchanger = exchanger;
         }
     }
-
 }
+

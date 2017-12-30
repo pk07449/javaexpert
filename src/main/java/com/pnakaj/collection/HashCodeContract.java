@@ -11,8 +11,9 @@ public class HashCodeContract {
 
     public static void main(String[] args) {
         HashMap<Customer, Integer> customerIntegerHashMap = new HashMap<>();
+
         customerIntegerHashMap.put(new Customer(1, "A"), 1);
-        customerIntegerHashMap.put(new Customer(1,"B"),4);
+        customerIntegerHashMap.put(new Customer(1,"A"),4);
         System.out.println(customerIntegerHashMap);
     }
 }

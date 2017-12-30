@@ -108,6 +108,7 @@ class PermanentEmployee extends BaseEmployee implements Serializable{
                 "id='" + getId() + '\'' +
                 "name='" + getName() + '\'' +
                 "baseId='" + getBaseId() + '\'' +
+                "pIEd='" +  + '\'' +
                 '}';
     }
 }

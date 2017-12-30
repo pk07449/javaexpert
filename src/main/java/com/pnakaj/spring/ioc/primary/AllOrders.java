@@ -16,7 +16,7 @@ public class AllOrders {
     private User user;
 
     public User getSingleUser() {
-        return new Customer();
+        return user;
     }
 
 }

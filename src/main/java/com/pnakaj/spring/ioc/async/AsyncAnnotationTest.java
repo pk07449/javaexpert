@@ -10,7 +10,9 @@ public class AsyncAnnotationTest {
 
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         context.getBean(AsyncTask.class).asyncTask();
-        System.out.println("async is executing");
+        System.out.println("did not wait");
+        context.getBean(AsyncTask.class).m1();
+        System.out.println("was waiting");
     }
 }
 

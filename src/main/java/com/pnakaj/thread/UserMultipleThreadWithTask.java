@@ -29,11 +29,10 @@ public class UserMultipleThreadWithTask {
         futures.add(executor.submit(() -> resource.task3(firstResult)));
         futures.add(executor.submit(() -> resource.task4(firstResult)));
         futures.add(executor.submit(() -> resource.task5(firstResult)));
-
-
-
-
         executor.shutdown();
+
+        System.out.println("UserMultipleThreadWithTask.main-------------------------------------------------------------================================------end");
+        System.exit(0);
     }
 
     static class Resource {
@@ -41,7 +40,7 @@ public class UserMultipleThreadWithTask {
         public String task1() throws InterruptedException {
             System.out.println("Resource.task1-started");
             System.out.println("Resource.task1");
-            Thread.sleep(10000);
+            Thread.sleep(1000);
             return "task1Completed";
         }
 
