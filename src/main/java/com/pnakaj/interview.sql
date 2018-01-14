@@ -28,6 +28,7 @@ Answer :SQL> select salary from (select salary from employee group by salary ord
 
       3221
       2122
+
 Question:  write a query to show nth(2nd) heighest salary from employee table
 Answer :
 
@@ -51,7 +52,7 @@ Question: To fetch ALTERNATE records from a table. (EVEN NUMBERED)
 Answer : select * from emp where rowid in (select decode(mod(rownum,2),0,rowid, null) from emp);
 
 To select ALTERNATE records from a table. (ODD NUMBERED)
-Answer : select * from emp where rowid in (select decode(mod(rownum,2),0,null ,rowid) from emp);
+Answer : select * from emp where rowid in (select decod   vve(mod(rownum,2),0,null ,rowid) from emp);
 
 Find the 3rd MAX salary in the emp table.
 select distinct sal from emp e1 where 3 = (select count(distinct sal) from emp e2 where e1.sal <= e2.sal);

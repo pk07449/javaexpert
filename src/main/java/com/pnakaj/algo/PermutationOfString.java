@@ -17,8 +17,6 @@ public class PermutationOfString {
 
     private static class Permutation {
 
-
-
         public void permutation(char datas[], int start, int end) {
 
             if (start == end) {
