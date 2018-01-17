@@ -6,7 +6,7 @@ package com.pnakaj.junit.shoping.cart.mockito.domain;
 public class Account {
 
     private int id;
-    private int number;
+    private long number;
     private int amount;
     private String name;
     private String ifcCode;
@@ -19,11 +19,11 @@ public class Account {
         this.id = id;
     }
 
-    public int getNumber() {
+    public long getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(long number) {
         this.number = number;
     }
 

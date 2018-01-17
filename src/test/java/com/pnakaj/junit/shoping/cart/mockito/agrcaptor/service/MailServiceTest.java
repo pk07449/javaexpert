@@ -30,9 +30,9 @@ public class MailServiceTest {
 
     @Test
     public void sendsEmailByConstructingEmailObject() {
-        String expectedUser = "tim";
-        String expectedDomain = "wingfield.com";
-        String expectedBody = "Hi Tim!";
+        String expectedUser = "pankaj";
+        String expectedDomain = "yash.com";
+        String expectedBody = "Hi Pankaj!";
 
         mailService.deliver(expectedUser + "@" + expectedDomain, expectedBody);
 
@@ -45,8 +45,8 @@ public class MailServiceTest {
 
     @Test
     public void sendsEmailBySplittingAddress() {
-        mailService.deliver("pankaj@yash.com", "Hi Tim!");
-        verify(externalMailSystem).send("yash.com", "pankaj", "Hi Tim!");
+        mailService.deliver("pankaj@yash.com", "Hi Pankaj!");
+        verify(externalMailSystem).send("yash.com", "pankaj", "Hi Pankaj!");
     }
 
 }

@@ -25,7 +25,14 @@ public class AccountRestController {
 
     @RequestMapping(name = "/account",method = RequestMethod.POST)
     public com.pnakaj.junit.shoping.cart.mockito.dto.Account openAccount(com.pnakaj.junit.shoping.cart.mockito.dto.Account account){
-        return accountMapper.mapToDTO(accountService.openAccount(accountMapper.mapToDomain(account)));
+
+        Account domainAccount = accountMapper.mapToDomain(account);
+
+        Account openedDomainAccount = accountService.openAccount(domainAccount);
+
+        com.pnakaj.junit.shoping.cart.mockito.dto.Account dtoAcocunt = accountMapper.mapToDTO(openedDomainAccount);
+
+        return dtoAcocunt;
     }
 
     @RequestMapping(name = "/transfer",method = RequestMethod.POST)
