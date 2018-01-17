@@ -1,4 +1,4 @@
-package com.pnakaj.junit.shoping.cart.junit;
+package com.pnakaj.junit.shoping.cart.junit.basic;
 
 import org.junit.*;
 
