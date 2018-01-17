@@ -3,6 +3,7 @@ package com.pnakaj.junit.shoping.cart.mockito.service;
 import com.pnakaj.junit.shoping.cart.mockito.exception.BadRequest;
 import com.pnakaj.junit.shoping.cart.mockito.exception.InvalidAccount;
 import com.pnakaj.junit.shoping.cart.mockito.domain.Account;
+import com.pnakaj.junit.shoping.cart.mockito.utils.Clock;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,11 +21,11 @@ public class AccountService {
     public com.pnakaj.junit.shoping.cart.mockito.domain.Account openAccount(com.pnakaj.junit.shoping.cart.mockito.domain.Account account) {
         String accountNumber = "" + account.getNumber();
 
-        if (!accountNumber.startsWith("0000")) {
+        if (!accountNumber.startsWith("10000")) {
             throw new InvalidAccount();
         }
 
-        if (!(accountNumber.length() == 16)) {
+        if (!(accountNumber.length() == 9)) {
             throw new InvalidAccount();
         }
 
@@ -34,7 +35,10 @@ public class AccountService {
 
         accounts.add(account);
         masterData.add(account);
-        return account;
+
+        Account account1 = new Account(account.getId(), account.getNumber(), account.getAmount(), account.getName(), account.getIfcCode());
+        account1.setCreateTime(Clock.now());
+        return account1;
 
 
         //1. Account No should be start with 0000

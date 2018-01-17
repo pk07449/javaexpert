@@ -15,6 +15,10 @@ public class MailService {
         email.setBody(body);
         applyUserAndDomainUsingProvidedAddress(address, email);
         externalMailerService.send(email);
+
+//        String[] addressComponents = address.split("@");
+//        externalMailerService.send( addressComponents[1], addressComponents[0], body);
+
     }
 
     private void applyUserAndDomainUsingProvidedAddress(String address, Email email) {
