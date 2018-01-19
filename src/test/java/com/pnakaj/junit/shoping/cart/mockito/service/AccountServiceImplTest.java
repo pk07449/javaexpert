@@ -2,7 +2,6 @@ package com.pnakaj.junit.shoping.cart.mockito.service;
 
 import com.pnakaj.junit.shoping.cart.mockito.domain.Account;
 import com.pnakaj.junit.shoping.cart.mockito.utils.Clock;
-import com.pnakaj.spring.ioc.factory.instancefactory.*;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -10,14 +9,14 @@ import static org.junit.Assert.*;
 /**
  * Created by pankaj on 1/18/2018.
  */
-public class AccountServiceTest {
+public class AccountServiceImplTest {
 
-    AccountService accountService = new AccountService();
+    AccountServiceImpl accountServiceImpl = new AccountServiceImpl();
 
     @Test
     public void opneAccountInBankWithValidInformation() {
         Clock.freeze(10);
-        Account actualAcocunt = accountService.openAccount(buildAccount());
+        Account actualAcocunt = accountServiceImpl.openAccount(buildAccount());
 
         Account expectedAccount = buildAccount();
         expectedAccount.setCreateTime(Clock.now());

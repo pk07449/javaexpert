@@ -1,6 +1,7 @@
 package com.pnakaj.junit.shoping.cart.mockito.agrcaptor.service;
 import com.pnakaj.junit.shoping.cart.mockito.agrcaptor.domain.Email;
 import com.pnakaj.junit.shoping.cart.mockito.agrcaptor.externalService.ExternalMailerService;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
@@ -44,6 +45,7 @@ public class MailServiceTest {
     }
 
     @Test
+    @Ignore
     public void sendsEmailBySplittingAddress() {
         mailService.deliver("pankaj@yash.com", "Hi Pankaj!");
         verify(externalMailSystem).send("yash.com", "pankaj", "Hi Pankaj!");

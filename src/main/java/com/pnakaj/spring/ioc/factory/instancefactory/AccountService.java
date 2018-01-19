@@ -5,6 +5,6 @@ package com.pnakaj.spring.ioc.factory.instancefactory;
  */
 public class AccountService {
     public AccountService() {
-        System.out.println("AccountService.AccountService");
+        System.out.println("AccountServiceImpl.AccountServiceImpl");
     }
 }

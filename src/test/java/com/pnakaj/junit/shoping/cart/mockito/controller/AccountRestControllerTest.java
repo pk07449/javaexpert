@@ -2,6 +2,7 @@ package com.pnakaj.junit.shoping.cart.mockito.controller;
 
 import com.pnakaj.junit.shoping.cart.mockito.dto.Account;
 import com.pnakaj.junit.shoping.cart.mockito.mapper.AccountMapper;
+import com.pnakaj.junit.shoping.cart.mockito.service.AccountService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -21,6 +22,9 @@ public class AccountRestControllerTest {
 
     @Mock
     private AccountMapper accountMapper;
+    @Mock
+    private AccountService accountService;
+
     @Test
     public void name() throws Exception {
         accountRestController.openAccount(new Account());

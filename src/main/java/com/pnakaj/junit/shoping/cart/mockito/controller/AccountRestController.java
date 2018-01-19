@@ -3,6 +3,7 @@ package com.pnakaj.junit.shoping.cart.mockito.controller;
 import com.pnakaj.junit.shoping.cart.mockito.domain.Account;
 import com.pnakaj.junit.shoping.cart.mockito.mapper.AccountMapper;
 import com.pnakaj.junit.shoping.cart.mockito.service.AccountService;
+import com.pnakaj.junit.shoping.cart.mockito.service.AccountServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,7 +20,7 @@ import java.util.List;
 public class AccountRestController {
 
     @Autowired
-    private AccountService accountService;
+    private AccountService accountServiceImpl;
     @Autowired
     private AccountMapper accountMapper;
 
@@ -28,7 +29,7 @@ public class AccountRestController {
 
         Account domainAccount = accountMapper.mapToDomain(account);
 
-        Account openedDomainAccount = accountService.openAccount(domainAccount);
+        Account openedDomainAccount = accountServiceImpl.openAccount(domainAccount);
 
         com.pnakaj.junit.shoping.cart.mockito.dto.Account dtoAcocunt = accountMapper.mapToDTO(openedDomainAccount);
 
