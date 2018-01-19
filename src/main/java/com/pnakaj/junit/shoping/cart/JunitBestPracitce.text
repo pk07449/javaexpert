@@ -1,0 +1,18 @@
+     Test only one code unit at a time
+     Don’t make unnecessary assertions
+     Make each test independent to all the others
+     Mock out all external services and state
+     Don’t unit-test configuration settings
+     Name your unit tests clearly and consistently
+     Write tests for methods that have the fewest dependencies first, and work your way up
+     All methods, regardless of visibility, should have appropriate unit tests
+     Aim for each unit test method to perform exactly one assertion
+     Create unit tests that target exceptions
+     Use the most appropriate assertion methods.
+     Put assertion parameters in the proper order
+     Ensure that test code is separated from production code
+     Do not print anything out in unit tests
+     Do not write your own catch blocks that exist only to fail a test
+     Do not rely on indirect testing
+     Integrate Testcases with build script
+     Do not skip unit tests
