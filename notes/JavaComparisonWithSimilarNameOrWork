@@ -1,0 +1,81 @@
+1. Byte streams vs Character streams
+2. Print stream vs PrintWriter
+3. Shallow copying, Deep copying and Cloning.
+4. StringTokenizer vs StreamTokenizer
+5. Observer vs Observable
+6. Timer vs TimerTask
+7. static vs non-static
+8. Enumeration vs Iterator
+9. Iterator vs ListIterator
+10. Vector vs ArrayList
+11. Array vs ArrayList
+12. System.in? vs System.out
+13. skip vs seek
+14. final vs finally vs finalize
+15. StringWriter vs StringBuilder
+16. for vs foreach
+17. Hashtable vs HashMap
+18. Set vs HashSet
+19. Extends vs Implements
+20. Hashcode vs Equals
+21. Applets Vs Applications
+22. PrintStream vs PrintWriter
+23. StringWriter vs StringBuilder
+24. Map vs HashMap
+25. HashMap vs TreeMap
+26. Comparable vs Comparator
+27. int vs Integer
+28. Abstract class vs Interface
+29. Java Class vs Interface
+30. Aggregation vs Composition
+31. HashSet vs HashMap
+32. HashSet vs TreeSet
+33. Encapsulation vs Abstraction
+33. Overloading vs Overriding
+34. Constructor and Method
+35. String vs StringBuffer vs StringBuilder
+38. Access Specifier vs Access Modifier in Java
+39. Equals vs contentEquals
+40. ArrayList Vs LinkedList
+41. Statement vs PreparedStatement vs CallableStatement
+
+42. JDBC vs Hibernate
+43. Hibernate get() vs load()
+44. Hibernate list() vs iterate()
+45. Hibernate Table per class vs Table per subclass vs Table per concreteclass
+46. 2-tier Architecture vs 3-tier Architecture
+47. Hibernate get() vs load()
+48. Hibernate Eager Initialization vs Lazy Initialization
+
+49. Servlets getRequestURL() vs getRequestURI()
+50. Servlets getRemoteAddr() vs getRemoteHost()
+51. Servlets getProtocol() vs getScheme()
+52. Servlets init-param vs context-param
+53. Servlets GET vs POST
+54. Servlets include vs forward
+55. Servlets forward vs sendRedirect
+56. ServletRequest.getRequestDispatcher vs ServletContext.getRequestDispatcher
+57. ServletOutptuStream Vs PrintWriter
+59. super vs super()
+60. this vs this()
+61. this vs super
+62. super vs final
+63. static vs final
+64. const vs final
+65. Keyword vs Reserved word
+66. Abstract class vs Final class
+67. length vs length() vs size()
+68. instance and instanceof
+69. Static binding vs Dynamic binding
+70. Static Polymorphism vs Dynamic Polymorphism
+71. getMessage() vs printStackTrace()
+
+72. Difference MouseListener and MouseAdapter
+73. Difference MouseMotionListener and MouseMotionAdapter
+74. Difference WindowListener and WindowAdapter
+75. Difference between Listener and Adapter
+76. Difference MouseListener and MouseMotionListener
+77. System.in, System.out and System.err
+78. Difference between JAR, WAR, EAR
+79. Difference between throws, throw Keywords
+80. Difference between Identifier and Keyword
