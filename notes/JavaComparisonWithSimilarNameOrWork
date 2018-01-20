@@ -70,12 +70,6 @@
 70. Static Polymorphism vs Dynamic Polymorphism
 71. getMessage() vs printStackTrace()
 
-72. Difference MouseListener and MouseAdapter
-73. Difference MouseMotionListener and MouseMotionAdapter
-74. Difference WindowListener and WindowAdapter
-75. Difference between Listener and Adapter
-76. Difference MouseListener and MouseMotionListener
-77. System.in, System.out and System.err
 78. Difference between JAR, WAR, EAR
 79. Difference between throws, throw Keywords
 80. Difference between Identifier and Keyword
