@@ -1,4 +1,4 @@
-package com.pnakaj.junit.shoping.cart.tdd.patterns.srp.beforerefactor.srp.beforerefactor;
+package com.pnakaj.junit.shoping.cart.tdd.patterns.srp.beforerefactor.srp.afterrefactor;
 
 import java.util.List;
 
@@ -16,6 +16,7 @@ public class Book {
         this.author = author;
         this.pages = pages;
     }
+
 
     public String getTitle() {
         return title;
@@ -35,6 +36,7 @@ public class Book {
         }
     }
 
+/*
     public String printCurrentPage(String displayType) {
         if (displayType.equals("plainText")) {
             return pages.get(currentPageIndex - 1);
@@ -43,4 +45,6 @@ public class Book {
         }
         return "UnknownType";
     }
+*/
+
 }
