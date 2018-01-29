@@ -12,8 +12,10 @@ public class NonSerializedSuperClassTest {
         permanentEmployee.setName("A");
         permanentEmployee.setBaseId(100);
         permanentEmployee.setBaseLocation("Pune");
+
         System.out.println("Before Serilizaiton");
         serilized(permanentEmployee);
+
         System.out.println("Before Deseilizaiton");
         permanentEmployee.setBaseId(200);
         deSerilized();

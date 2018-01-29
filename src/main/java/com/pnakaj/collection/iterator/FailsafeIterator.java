@@ -11,8 +11,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
  */
 public class FailsafeIterator {
     public static void main(String[] args) throws InterruptedException {
-//        arrayListFailFastIterator();
-        arrayListFailSafeIterator();
+        arrayListFailFastIterator();
+//        arrayListFailSafeIterator();
     }
 
     private static void arrayListFailFastIterator() {
@@ -31,7 +31,7 @@ public class FailsafeIterator {
         Iterator<String> it = list.iterator();
         while (it.hasNext()) {
             it.next();
-            list.add("kumar");      //This will throw ConcurrentModificationException
+            list.add("kumar");
         }
     }
 }

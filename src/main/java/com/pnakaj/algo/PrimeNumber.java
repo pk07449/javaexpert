@@ -8,7 +8,7 @@ public class PrimeNumber {
 
         System.out.println(isPrimeUsingRecursion(17,2));
 
-        System.out.println(isPrime(16));
+        System.out.println(isPrime(9));
 
     }
 
@@ -20,7 +20,7 @@ public class PrimeNumber {
             }
         }
 
-        if(count == 2) {
+        if(count == 1) {
             return true;
         }
         else {
