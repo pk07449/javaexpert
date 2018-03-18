@@ -24,7 +24,10 @@ public class SortingForMultipleField {
         new Customer(1,"C","20")
         );
 
-        customers.sort(comparing(customer -> customer.getId()));
+        Comparator<Customer> c = comparing(Customer::getId)
+                .thenComparing(Customer::getName)
+                .thenComparing(Customer::getAge);
+        customers.sort(c);
 
         System.out.println(customers);
 
