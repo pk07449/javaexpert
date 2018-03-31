@@ -6,7 +6,7 @@ package com.pnakaj.pattern.gof.template;
 public abstract class LambdaExecutorTemplate<T, R> {
 
 
-    final public R executeLambda(T t) {
+    final public R handleRequest(T t) {
         preProcess(t);
         return postProcessor(process(t));
     }
