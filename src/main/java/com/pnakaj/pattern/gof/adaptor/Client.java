@@ -1,4 +1,4 @@
-package com.pnakaj.pattern.adaptor;
+package com.pnakaj.pattern.gof.adaptor;
 
 public class Client {
     public static void main(String[] args) {

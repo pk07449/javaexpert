@@ -1,4 +1,4 @@
-package com.pnakaj.pattern.producerConsumer;
+package com.pnakaj.pattern.gof.producerConsumer;
 
 import java.util.LinkedList;
 import java.util.Queue;

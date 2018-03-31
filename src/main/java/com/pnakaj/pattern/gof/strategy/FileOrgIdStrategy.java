@@ -1,4 +1,4 @@
-package com.pnakaj.pattern.strategy;
+package com.pnakaj.pattern.gof.strategy;
 
 /**
  * Created by pankaj on 8/12/2017.
