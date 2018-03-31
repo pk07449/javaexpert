@@ -22,4 +22,8 @@ public class NotificationObserver {
     public List<Notification> getNotifications() {
         return notifications;
     }
+
+    public void notifyNotification(Message message) {
+        notifications.forEach(notification -> notification.send(message));
+    }
 }
