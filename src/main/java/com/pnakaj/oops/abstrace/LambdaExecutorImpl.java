@@ -7,16 +7,16 @@ package com.pnakaj.oops.abstrace;
 public class LambdaExecutorImpl extends LambdaExecutor {
 
     protected void preProcess() {
-        System.out.println("LambdaExecutorImpl.preProcess");
+        System.out.println("LambdaExecutorTemplateImpl.preProcess");
     }
 
     protected void process() {
 
-        System.out.println("LambdaExecutorImpl.process");
+        System.out.println("LambdaExecutorTemplateImpl.process");
     }
 
     public void postProcessor() {
-        System.out.println("LambdaExecutorImpl.postProcessor");
+        System.out.println("LambdaExecutorTemplateImpl.postProcessor");
 
     }
 }
