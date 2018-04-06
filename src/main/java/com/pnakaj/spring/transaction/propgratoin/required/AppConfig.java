@@ -1,9 +1,7 @@
-package com.pnakaj.spring.transaction.propgratoin;
+package com.pnakaj.spring.transaction.propgratoin.required;
 
-import com.pnakaj.spring.transaction.propgratoin.domain.Customer;
 import org.apache.commons.dbcp.BasicDataSource;
 import org.hibernate.SessionFactory;
-import org.hibernate.dialect.OracleDialect;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -21,7 +19,7 @@ import java.util.Properties;
  */
 @Configuration
 @ComponentScan("com.pnakaj.spring.transaction.propgratoin")
-@EnableTransactionManagement
+@EnableTransactionManagement(proxyTargetClass = true)
 public class AppConfig {
 
     @Bean(destroyMethod = "close", name = "dataSource")
@@ -31,6 +29,8 @@ public class AppConfig {
         basicDataSource.setUsername("system");
         basicDataSource.setPassword("password");
         basicDataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
+//        <property name="defaultAutoCommit" value="false" />
+        basicDataSource.setDefaultAutoCommit(false);
         return basicDataSource;
     }
 
@@ -45,7 +45,7 @@ public class AppConfig {
     public LocalSessionFactoryBean getLocalSessionFactory() {
         AnnotationSessionFactoryBean localSessionFactoryBean = new AnnotationSessionFactoryBean();
         localSessionFactoryBean.setDataSource(getBasicDataSource());
-        localSessionFactoryBean.setPackagesToScan("com.pnakaj.spring.transaction.propgratoin.domain");
+        localSessionFactoryBean.setPackagesToScan("com.pnakaj.spring.transaction.propgratoin.required.domain");
         Properties hibernateProperties = new Properties();
         hibernateProperties.put("hibernate.dialect", "org.hibernate.dialect.OracleDialect");
 //        hibernateProperties.put("hibernate.current_session_context_class", "thread");

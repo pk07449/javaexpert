@@ -1,4 +1,4 @@
-package com.pnakaj.spring.transaction.propgratoin.domain;
+package com.pnakaj.spring.transaction.propgratoin.required.domain;
 
 import javax.persistence.*;
 
@@ -7,7 +7,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table
-public class Dealer {
+public class Employee {
     @Id
     @GeneratedValue
     @Column
@@ -19,7 +19,7 @@ public class Dealer {
     private Integer age;
     @Column
     private String address;
-    @Column(nullable = false)
+    @Column
     private Integer salary;
 
     public Integer getId() {

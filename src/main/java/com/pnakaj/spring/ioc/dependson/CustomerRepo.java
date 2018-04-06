@@ -10,6 +10,6 @@ import org.springframework.stereotype.Repository;
 public class CustomerRepo {
 
     public CustomerRepo() {
-        System.out.println("CustomerRepo.CustomerRepo");
+        System.out.println("GenericRepo.GenericRepo");
     }
 }

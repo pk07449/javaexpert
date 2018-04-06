@@ -1,8 +1,7 @@
-package com.pnakaj.spring.transaction.propgratoin;
+package com.pnakaj.spring.transaction.propgratoin.required;
 
-import com.pnakaj.spring.ioc.component.HelloComponenetImpl;
-import com.pnakaj.spring.transaction.propgratoin.controller.CustomerController;
-import com.pnakaj.spring.transaction.propgratoin.domain.Customer;
+import com.pnakaj.spring.transaction.propgratoin.required.controller.CustomerController;
+import com.pnakaj.spring.transaction.propgratoin.required.domain.Customer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

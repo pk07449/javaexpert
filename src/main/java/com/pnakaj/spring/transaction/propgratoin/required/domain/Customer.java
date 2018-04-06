@@ -1,4 +1,4 @@
-package com.pnakaj.spring.transaction.propgratoin.domain;
+package com.pnakaj.spring.transaction.propgratoin.required.domain;
 
 import javax.persistence.*;
 
@@ -7,7 +7,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table
-public class Employee {
+public class Customer {
     @Id
     @GeneratedValue
     @Column
