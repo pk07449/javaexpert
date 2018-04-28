@@ -1,3 +1,11 @@
+create table employee(
+id number(5),
+adddress varchar(15),
+age number(2),
+name varchar(15),
+salary number(6)
+);
+
 insert INTO employee VALUES(1,'PUNE',20,'A',1000);
 insert INTO employee VALUES(2,'PATNA',20,'B',2022);
 insert INTO employee VALUES(4,'DELHI',22,'c',1052);
@@ -7,6 +15,39 @@ insert INTO employee VALUES(5,'GOA',32,'F',2122);
 insert INTO employee VALUES(8,'PUNE',25,'G',2121);
 insert INTO employee VALUES(9,'GOA',20,'H',3221);
 insert INTO employee VALUES(9,'PUNE',55,'I',2312);
+
+create table Department(
+id number(5),
+name varchar(15),
+employeeId number(15)
+);
+
+insert INTO Department VALUES(1,'D1',1);
+insert INTO Department VALUES(2,'D2',2);
+insert INTO Department VALUES(4,'D3',4);
+insert INTO Department VALUES(3,'D4',3);
+insert INTO Department VALUES(6,'D5',6);
+insert INTO Department VALUES(5,'D6',5);
+insert INTO Department VALUES(8,'D7',8);
+insert INTO Department VALUES(9,'D8',9);
+insert INTO Department VALUES(9,'D9',9);
+
+create table Location(
+id number(5),
+employeeId number(15),
+departmentId number(15),
+name varchar(15)
+);
+
+insert INTO Location VALUES(1,1,1,'L1');
+insert INTO Location VALUES(2,2,2,'L2');
+insert INTO Location VALUES(4,4,4,'L3');
+insert INTO Location VALUES(3,3,3,'L4');
+insert INTO Location VALUES(6,6,6,'L5');
+insert INTO Location VALUES(5,5,5,'L6');
+insert INTO Location VALUES(8,8,8,'L7');
+insert INTO Location VALUES(9,9,9,'L8');
+insert INTO Location VALUES(9,9,9,'L9');
 
 
 SQL> select salary from employee group by salary order by salary desc;

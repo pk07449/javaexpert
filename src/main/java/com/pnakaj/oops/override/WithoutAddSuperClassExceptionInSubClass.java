@@ -8,14 +8,14 @@ import java.io.IOException;
 
 public class WithoutAddSuperClassExceptionInSubClass {
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws Exception {
         Hello hello = new Hai();
         hello.m1();
     }
 }
 
 class Hello {
-    protected void m1() throws RuntimeException {
+    protected void m1() throws Exception {
         System.out.println("Hello.m1");
     }
 }
