@@ -20,7 +20,7 @@ public class Test {
 
         Thread thread2 = new Thread(() -> controller.getCustomerByName("pankaj"), "Thread 2");
         try {
-            Thread.sleep(5000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
         }
         thread2.start();

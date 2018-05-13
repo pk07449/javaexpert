@@ -28,10 +28,10 @@ public class CustomerController {
         userService.update(customer);
 
         System.err.println(threadName + "- Customer salary increased by " + customer);
-        sleep(threadName);
+//        sleep(threadName);
     }
 
-    @Transactional(isolation = Isolation.READ_COMMITTED)
+    @Transactional(isolation = Isolation.SERIALIZABLE)
     public Customer getCustomerByName(String customerName) {
         String threadName = Thread.currentThread().getName();
         System.err.println(threadName + "- Prepare to check customer salary");
@@ -41,7 +41,10 @@ public class CustomerController {
         System.err.println(threadName + "- Customer salary is " + customer.getSalary());
         sleep(threadName);
         System.err.println(customer);
-        
+        customer = userService.getCustomer(customerName);
+
+
+        System.err.println(customer);
         return customer;
     }
 

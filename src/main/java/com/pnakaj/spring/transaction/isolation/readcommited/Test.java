@@ -15,15 +15,17 @@ public class Test {
         controller.saveCustomer(new Customer("pankaj", 500));
 
 
-        Thread thread1 = new Thread(() -> controller.updateCustomer(new Customer("pankaj", 1000)), "Thread 1");
-        thread1.start();
+        Thread thread2 = new Thread(() -> controller.getCustomerByName("pankaj"), "Thread 1");
 
-        Thread thread2 = new Thread(() -> controller.getCustomerByName("pankaj"), "Thread 2");
+        thread2.start();
+
+        Thread thread1 = new Thread(() -> controller.updateCustomer(new Customer("pankaj", 999)), "Thread 2");
         try {
-            Thread.sleep(5000);
+            thread1.sleep(2000);
         } catch (InterruptedException e) {
         }
-        thread2.start();
+        thread1.start();
+
     }
 
 }
