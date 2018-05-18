@@ -5,7 +5,15 @@ package com.pnakaj.pattern.gof.decorator;
  */
 public class Email implements IEmail {
 
-    public void send() {
+    private String content;
 
+    public Email(String content) {
+        this.content = content;
     }
+
+    @Override
+    public String getContents() {
+        return content;
+    }
+
 }
