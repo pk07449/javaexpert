@@ -38,7 +38,7 @@
     employeeId number(15),
     departmentId number(15),
     name varchar(15)
-    );
+    )
 
     insert INTO Location VALUES(1,1,1,'L1');
     insert INTO Location VALUES(2,2,2,'L2');
@@ -47,7 +47,7 @@
     insert INTO Location VALUES(6,6,6,'L5');
     insert INTO Location VALUES(5,5,5,'L6');
     insert INTO Location VALUES(8,8,8,'L7');
-    insert INTO Location VALUES(9,9,9,'L8');s
+    insert INTO Location VALUES(9,9,9,'L8');
     insert INTO Location VALUES(9,9,9,'L9');
     insert INTO Location VALUES(9,9,10,'L10');
 
