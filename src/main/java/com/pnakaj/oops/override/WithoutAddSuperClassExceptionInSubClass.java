@@ -15,7 +15,7 @@ public class WithoutAddSuperClassExceptionInSubClass {
 }
 
 class Hello {
-    protected void m1() throws Exception {
+    protected void m1() throws IOException {
         System.out.println("Hello.m1");
     }
 }

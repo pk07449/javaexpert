@@ -5,5 +5,4 @@ public class Client {
         IHindiCustomer hindiCustomer = new HindiCustomerAdaptor(new EnglishCustomer());
         hindiCustomer.jodo();
     }
-
 }
