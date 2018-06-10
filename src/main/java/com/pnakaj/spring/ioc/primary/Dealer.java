@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 
 @Primary
 @Component
-
 public class Dealer implements User {
 
     @Override

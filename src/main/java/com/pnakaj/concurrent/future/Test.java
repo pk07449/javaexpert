@@ -7,6 +7,7 @@ import java.util.concurrent.*;
  */
 public class Test {
 
+
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         ExecutorService executorService = Executors.newCachedThreadPool();
         Future<String> future = executorService.submit(() -> {

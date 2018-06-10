@@ -25,9 +25,9 @@ public class ConcurrentMap {
         System.out.println(myMap);
 
         Iterator it2 = myMap.keySet().iterator();
-        while(it2.hasNext()){
+        while (it2.hasNext()) {
             it2.next();
-            myMap.put("d","");
+            myMap.put("d", "");
         }
 
     }
