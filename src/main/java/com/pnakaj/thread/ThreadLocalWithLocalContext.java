@@ -6,7 +6,6 @@ package com.pnakaj.thread;
 public class ThreadLocalWithLocalContext {
 
     public static void main(String[] args) {
-
         new MyThread(new SomeClass(1,"A")).start();
         new MyThread(new SomeClass(2,"B")).start();
         new MyThread(new SomeClass(3,"C")).start();
@@ -17,7 +16,6 @@ public class ThreadLocalWithLocalContext {
         new MyThread(new SomeClass(8,"H")).start();
         new MyThread(new SomeClass(9,"I")).start();
         new MyThread(new SomeClass(10,"J")).start();
-
     }
 
     static  class MyThread extends  Thread {
@@ -28,7 +26,6 @@ public class ThreadLocalWithLocalContext {
         }
 
         public void run() {
-
             m1(someClass);
             m2();
             m3();

@@ -1,10 +1,6 @@
 package com.pnakaj.pattern.solid.srp.goodcode;
 
-import org.hibernate.util.StringHelper;
-import org.springframework.util.StringUtils;
-
 import static org.hibernate.util.StringHelper.isNotEmpty;
-import static org.springframework.util.StringUtils.isEmpty;
 
 /**
  * Created by pankaj on 3/30/2018.
@@ -15,9 +11,13 @@ public class EmailService {
     }
 
     public boolean validateEmail(String email) {
-        if (isNotEmpty(email) && email.contains("@")) {
+        if (isNotEmpty(email) && correctEmail(email)) {
             throw new EmailValidException("Email Should Not be Empty");
         }
         return true;
+    }
+
+    private boolean correctEmail(String email) {
+        return email.contains("@");
     }
 };

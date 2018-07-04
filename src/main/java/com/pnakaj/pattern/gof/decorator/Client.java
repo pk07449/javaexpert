@@ -5,7 +5,6 @@ package com.pnakaj.pattern.gof.decorator;
  */
 public class Client {
     public static void main(String[] args) {
-        IEmail emailDecorator = new ExternalDecorator(new Email("Test Mail"));
-        System.out.println(emailDecorator.getContents());
+        System.out.println(new ExternalDecorator(new Email("Test Mail")).getContents());
     }
 }

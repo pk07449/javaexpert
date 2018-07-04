@@ -7,13 +7,13 @@ public class HindiCustomerAdaptor extends EnglishCustomer implements IHindiCusto
 
     EnglishCustomer englishCustomer;
 
-    public HindiCustomerAdaptor(EnglishCustomer englishCustomer) {
-        {
-            this.englishCustomer = englishCustomer;
-        }
-    }
+//    public HindiCustomerAdaptor(EnglishCustomer englishCustomer) {
+//        {
+//            this.englishCustomer = englishCustomer;
+//        }
+//    }
 
     public void jodo() {
-        englishCustomer.add();
+        super.add();
     }
 }

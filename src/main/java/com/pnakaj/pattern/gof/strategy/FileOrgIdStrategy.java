@@ -6,7 +6,6 @@ package com.pnakaj.pattern.gof.strategy;
 public class FileOrgIdStrategy implements OrgIdStrategy {
     @Override
     public int getOrgId(String resourceId) {
-
         return 0;
     }
 }

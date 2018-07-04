@@ -16,7 +16,7 @@ import static java.util.concurrent.CompletableFuture.supplyAsync;
 /**
  * Created by pankaj on 6/30/2018.
  */
-public class TIAAssignment {
+public class ProblemToFindTimeToFinishWorkt  {
 
     public static void main(String[] args) throws Exception {
 
