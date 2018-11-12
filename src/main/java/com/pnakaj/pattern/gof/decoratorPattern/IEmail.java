@@ -1,4 +1,4 @@
-package com.pnakaj.pattern.gof.decorator;
+package com.pnakaj.pattern.gof.decoratorPattern;
 
 /**
  * Created by pankaj on 3/12/2017.

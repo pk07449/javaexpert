@@ -1,14 +1,14 @@
-package com.pnakaj.pattern.gof.decorator;
+package com.pnakaj.pattern.gof.decoratorPattern;
 
 /**
  * Created by pankaj on 3/12/2017.
  */
-public class ExternalDecorator extends EmailDecorator {
+public class ExternalEmailDecorator implements IEmail {
 
     private String content;
     private IEmail originalEmail;
 
-    public ExternalDecorator(IEmail basicEmail) {
+    public ExternalEmailDecorator(IEmail basicEmail) {
         originalEmail = basicEmail;
     }
 
