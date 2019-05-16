@@ -1,4 +1,4 @@
-package com.pnakaj.algo;
+package com.pnakaj.algo.string;
 
 /**
  * Created by pankaj on 3/31/2017.

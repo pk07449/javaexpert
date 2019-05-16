@@ -1,4 +1,4 @@
-package com.pnakaj.algo;
+package com.pnakaj.algo.string;
 
 
 /**

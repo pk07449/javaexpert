@@ -1,4 +1,4 @@
-package com.pnakaj.algo;
+package com.pnakaj.algo.array;
 
 /**
  * Created by pankaj on 2/10/2018.
