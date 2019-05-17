@@ -15,15 +15,16 @@ public class FindDuplicateFromList {
 
     public static void main(String[] args) {
 
-        List<Customer> list = Arrays.asList(
+        List<Customer> customers = Arrays.asList(
                 new Customer(1,"pankaj"),
                 new Customer(1,"kumar"),
                 new Customer(1,"pankaj"));
 
-        List<Customer> customers = list.stream().distinct()
-                .filter(entry -> Collections.frequency(list, entry) > 1).collect(Collectors.toList());
+        List<Customer> duplicateCustomers = customers.stream().distinct()
+                .filter(customer -> Collections.frequency(customers, customer) > 1)
+                .collect(Collectors.toList());
 
-        System.out.println(customers);
+        System.out.println(duplicateCustomers);
     }
 
    static class Customer {
