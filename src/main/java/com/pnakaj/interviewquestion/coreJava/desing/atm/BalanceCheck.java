@@ -14,6 +14,6 @@ public class BalanceCheck {
 
     public double CheckBalance()
     {
-        return Bank.GetBankInstance().GetAccountForId(accountId).GetBalance();
+        return Bank.getBankInstance().GetAccountForId(accountId).GetBalance();
     }
 }
