@@ -1,8 +1,7 @@
-package com.pnakaj.spring.hibernate.concept;
+package com.pnakaj.interviewquestion.hibernate.relationshipmanage.cascade;
 
-import com.pnakaj.spring.hibernate.concept.config.AppConfig;
-import com.pnakaj.spring.hibernate.concept.domain.Employee;
-import com.pnakaj.spring.hibernate.concept.service.EmployeeService;
+import com.pnakaj.interviewquestion.hibernate.relationshipmanage.cascade.config.AppConfig;
+import com.pnakaj.interviewquestion.hibernate.relationshipmanage.cascade.service.EmployeeService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -15,6 +14,5 @@ public class AppTest {
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
         EmployeeService bean = annotationConfigApplicationContext.getBean(EmployeeService.class);
         bean.saveEmployeeDetail();
-        Employee employeeById = bean.getEmployeeById(2);
     }
 }
