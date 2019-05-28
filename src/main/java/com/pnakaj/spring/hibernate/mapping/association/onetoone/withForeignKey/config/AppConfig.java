@@ -1,4 +1,4 @@
-package com.pnakaj.spring.hibernate.mapping.association.onetoone.config;
+package com.pnakaj.spring.hibernate.mapping.association.onetoone.withForeignKey.config;
 
 
 import org.apache.commons.dbcp.BasicDataSource;
@@ -19,7 +19,7 @@ import java.util.Properties;
  * Created by pankaj on 2/27/2017.
  */
 @Configuration
-@ComponentScan("com.pnakaj.spring.hibernate.mapping.association.onetoone")
+@ComponentScan("com.pnakaj.spring.hibernate.mapping.association.onetoone.withForeignKey")
 @EnableTransactionManagement
 public class AppConfig {
 
@@ -44,7 +44,7 @@ public class AppConfig {
     public LocalSessionFactoryBean getLocalSessionFactory() {
         AnnotationSessionFactoryBean localSessionFactoryBean = new AnnotationSessionFactoryBean();
         localSessionFactoryBean.setDataSource(getBasicDataSource());
-        localSessionFactoryBean.setPackagesToScan("com.pnakaj.spring.hibernate.mapping.association.onetoone.domain");
+        localSessionFactoryBean.setPackagesToScan("com.pnakaj.spring.hibernate.mapping.association.onetoone.withForeignKey.domain");
         Properties hibernateProperties = new Properties();
         hibernateProperties.put("hibernate.dialect", "org.hibernate.dialect.OracleDialect");
         hibernateProperties.put("hibernate.current_session_context_class", "thread");

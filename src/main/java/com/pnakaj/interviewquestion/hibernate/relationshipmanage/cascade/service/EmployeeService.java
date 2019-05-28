@@ -23,4 +23,8 @@ public class EmployeeService {
         employeeRepo.saveAddress(address);
         employeeRepo.saveEmployee(new Employee(null,"pankaj","permanent", address));
     }
+
+    public void delete(int i) {
+       employeeRepo.delete(i);
+    }
 }

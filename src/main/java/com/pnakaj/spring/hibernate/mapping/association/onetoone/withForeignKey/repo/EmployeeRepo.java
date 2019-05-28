@@ -1,8 +1,8 @@
-package com.pnakaj.spring.hibernate.mapping.association.onetoone.repo;
+package com.pnakaj.spring.hibernate.mapping.association.onetoone.withForeignKey.repo;
 
-import com.pnakaj.spring.hibernate.mapping.association.onetoone.domain.Address;
+import com.pnakaj.spring.hibernate.mapping.association.onetoone.withForeignKey.domain.Address;
 
-import com.pnakaj.spring.hibernate.mapping.association.onetoone.domain.Employee;
+import com.pnakaj.spring.hibernate.mapping.association.onetoone.withForeignKey.domain.Employee;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.classic.Session;
@@ -23,14 +23,21 @@ public class EmployeeRepo {
 
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void saveEmployee(Employee employee){
-
         Session currentSession = sessionFactory.getCurrentSession();
         Transaction transaction = currentSession.beginTransaction();
         currentSession.save(employee);
         transaction.commit();
-
     }
 
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    public void saveEmployee(Employee employee,Address address){
+        Session currentSession = sessionFactory.getCurrentSession();
+        Transaction transaction = currentSession.beginTransaction();
+        currentSession.save(employee);
+        employee.setAddress(address);
+        currentSession.saveOrUpdate(employee);
+        transaction.commit();
+    }
 
     public void saveAddress(Address address) {
         Session currentSession = sessionFactory.getCurrentSession();

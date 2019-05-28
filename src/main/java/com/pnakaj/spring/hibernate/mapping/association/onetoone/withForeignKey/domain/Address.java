@@ -1,4 +1,4 @@
-package com.pnakaj.spring.hibernate.mapping.association.onetoone.domain;
+package com.pnakaj.spring.hibernate.mapping.association.onetoone.withForeignKey.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

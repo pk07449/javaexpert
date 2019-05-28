@@ -14,5 +14,6 @@ public class AppTest {
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
         EmployeeService bean = annotationConfigApplicationContext.getBean(EmployeeService.class);
         bean.saveEmployeeDetail();
+        bean.delete(2);
     }
 }

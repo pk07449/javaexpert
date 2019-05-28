@@ -28,11 +28,8 @@ public class Employee {
         this.address = address;
     }
 
-
-
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Address address;
-
 
     public Integer getId() {
         return id;

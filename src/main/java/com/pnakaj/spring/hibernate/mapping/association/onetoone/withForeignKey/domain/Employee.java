@@ -1,4 +1,4 @@
-package com.pnakaj.spring.hibernate.mapping.association.onetoone.domain;
+package com.pnakaj.spring.hibernate.mapping.association.onetoone.withForeignKey.domain;
 
 
 
@@ -28,11 +28,8 @@ public class Employee {
         this.address = address;
     }
 
-
-
-    @OneToOne
+    @OneToOne(mappedBy = "address")
     private Address address;
-
 
     public Integer getId() {
         return id;
@@ -56,5 +53,9 @@ public class Employee {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 }

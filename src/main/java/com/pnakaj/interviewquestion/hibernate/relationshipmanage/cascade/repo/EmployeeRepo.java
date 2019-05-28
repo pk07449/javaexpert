@@ -15,8 +15,6 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Repository
 public class EmployeeRepo {
-
-
     @Autowired
     private SessionFactory sessionFactory;
 
@@ -27,9 +25,7 @@ public class EmployeeRepo {
         Transaction transaction = currentSession.beginTransaction();
         currentSession.save(employee);
         transaction.commit();
-
     }
-
 
     public void saveAddress(Address address) {
         Session currentSession = sessionFactory.getCurrentSession();
@@ -39,5 +35,10 @@ public class EmployeeRepo {
     }
 
 
-
+    public void delete(int i) {
+        Session currentSession = sessionFactory.getCurrentSession();
+        Transaction transaction = currentSession.beginTransaction();
+        currentSession.delete(currentSession.get(Employee.class,i));
+        transaction.commit();
+    }
 }

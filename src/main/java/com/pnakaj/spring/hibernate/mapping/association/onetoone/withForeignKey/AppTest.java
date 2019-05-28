@@ -1,7 +1,7 @@
-package com.pnakaj.spring.hibernate.mapping.association.onetoone;
+package com.pnakaj.spring.hibernate.mapping.association.onetoone.withForeignKey;
 
-import com.pnakaj.spring.hibernate.mapping.association.onetoone.config.AppConfig;
-import com.pnakaj.spring.hibernate.mapping.association.onetoone.service.EmployeeService;
+import com.pnakaj.spring.hibernate.mapping.association.onetoone.withForeignKey.config.AppConfig;
+import com.pnakaj.spring.hibernate.mapping.association.onetoone.withForeignKey.service.EmployeeService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**

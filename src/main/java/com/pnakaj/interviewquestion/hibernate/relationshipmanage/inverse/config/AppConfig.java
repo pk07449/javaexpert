@@ -44,7 +44,7 @@ public class AppConfig {
     public LocalSessionFactoryBean getLocalSessionFactory() {
         AnnotationSessionFactoryBean localSessionFactoryBean = new AnnotationSessionFactoryBean();
         localSessionFactoryBean.setDataSource(getBasicDataSource());
-        localSessionFactoryBean.setPackagesToScan("com.pnakaj.spring.hibernate.mapping.association.onetoone.domain");
+        localSessionFactoryBean.setPackagesToScan("com.pnakaj.spring.hibernate.mapping.association.onetoone.withForeignKey.domain");
         Properties hibernateProperties = new Properties();
         hibernateProperties.put("hibernate.dialect", "org.hibernate.dialect.OracleDialect");
         hibernateProperties.put("hibernate.current_session_context_class", "thread");
