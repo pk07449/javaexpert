@@ -27,6 +27,18 @@ public class EmployeeRepo {
         transaction.commit();
     }
 
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    public void saveEmployee(Employee employee, Address address){
+
+        Session currentSession = sessionFactory.getCurrentSession();
+        Transaction transaction = currentSession.beginTransaction();
+        currentSession.save(employee);
+        employee.setAddress(address);
+        currentSession.saveOrUpdate(employee);
+        transaction.commit();
+    }
+
+
     public void saveAddress(Address address) {
         Session currentSession = sessionFactory.getCurrentSession();
         Transaction transaction = currentSession.beginTransaction();

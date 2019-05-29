@@ -20,8 +20,7 @@ public class EmployeeService {
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void saveEmployeeDetail() {
         Address address = new Address(null, "Bihar", "DOS");
-        employeeRepo.saveAddress(address);
-        employeeRepo.saveEmployee(new Employee(null,"pankaj","permanent", address));
+        employeeRepo.saveEmployee(new Employee(null,"pankaj","permanent", null),address);
     }
 
     public void delete(int i) {

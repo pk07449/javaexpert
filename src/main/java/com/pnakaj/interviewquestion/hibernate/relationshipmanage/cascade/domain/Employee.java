@@ -31,6 +31,14 @@ public class Employee {
     @OneToOne(cascade = CascadeType.ALL)
     private Address address;
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
     public Integer getId() {
         return id;
     }
