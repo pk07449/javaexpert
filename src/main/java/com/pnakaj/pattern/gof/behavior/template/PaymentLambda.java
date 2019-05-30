@@ -1,25 +1,25 @@
-package com.pnakaj.pattern.gof.template;
+package com.pnakaj.pattern.gof.behavior.template;
 
 
 /**
  * Created by pankaj on 4/13/2017.
  */
-public class RoleLambda extends LambdaExecutorTemplate<Integer,String> {
+public class PaymentLambda extends LambdaExecutorTemplate<Integer,String> {
 
     @Override
     protected void preProcess(Integer integer) {
-        System.out.println("RoleLambda.preProcess");
+        System.out.println("PaymentLambda.preProcess");
     }
 
     @Override
     protected String process(Integer integer) {
-        System.out.println("RoleLambda.process");
+        System.out.println("PaymentLambda.process");
         return null;
     }
 
     @Override
     protected String postProcessor(String s) {
-        System.out.println("RoleLambda.postProcessor");
+        System.out.println("PaymentLambda.postProcessor");
         return null;
     }
 }

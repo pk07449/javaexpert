@@ -1,7 +1,6 @@
-package com.pnakaj.pattern.gof.observer;
+package com.pnakaj.pattern.gof.behavior.observer;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**

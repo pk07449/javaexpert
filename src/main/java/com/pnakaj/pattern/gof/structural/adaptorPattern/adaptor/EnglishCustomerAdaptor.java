@@ -1,7 +1,7 @@
-package com.pnakaj.pattern.gof.adaptorPattern.adaptor;
+package com.pnakaj.pattern.gof.structural.adaptorPattern.adaptor;
 
-import com.pnakaj.pattern.gof.adaptorPattern.adaptee.EnglishCustomer;
-import com.pnakaj.pattern.gof.adaptorPattern.target.IHindiCustomer;
+import com.pnakaj.pattern.gof.structural.adaptorPattern.adaptee.EnglishCustomer;
+import com.pnakaj.pattern.gof.structural.adaptorPattern.target.IHindiCustomer;
 
 /**
  * Created by pankaj on 2/5/2017.

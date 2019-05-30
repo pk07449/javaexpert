@@ -16,6 +16,7 @@ public class ProducerConsumerUsingConcurrency {
         ExecutorService executorService = Executors.newCachedThreadPool();
         executorService.submit(new Consumer(countDownLatch,queue));
         executorService.submit(new Consumer(countDownLatch,queue));
+
         Future submit = executorService.submit(new Producer(countDownLatch,queue));
         try {
             Object o = submit.get();

@@ -1,4 +1,4 @@
-package com.pnakaj.pattern.gof.template;
+package com.pnakaj.pattern.gof.behavior.template;
 
 
 /**

@@ -1,4 +1,4 @@
-package com.pnakaj.pattern.gof.adaptorPattern.adaptee;
+package com.pnakaj.pattern.gof.structural.adaptorPattern.adaptee;
 
 /**
  * Created by pankaj on 2/5/2017.

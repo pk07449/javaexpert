@@ -1,4 +1,4 @@
-package com.pnakaj.pattern.gof.template;
+package com.pnakaj.pattern.gof.behavior.template;
 
 /**
  * Created by pankaj on 7/3/2018.

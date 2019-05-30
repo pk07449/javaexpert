@@ -1,4 +1,4 @@
-package com.pnakaj.pattern.gof.observer;
+package com.pnakaj.pattern.gof.behavior.observer;
 
 /**
  * Created by pankaj on 8/12/2017.
