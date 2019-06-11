@@ -1,4 +1,4 @@
-|-----------------------------------------------------------------------------------------------------------------------
+yyyyy|-----------------------------------------------------------------------------------------------------------------------
 |                                               Creational Design Patterns
 |-----------------------------------------------------------------------------------------------------------------------
 Abstract Factory. Allows for the creation of objects without specifying their concrete type.
@@ -30,4 +30,6 @@ State. Allows an object to alter its behavior when its internal state changes.
 Strategy. Allows one of a family of algorithms to be selected on-the-fly at run-time.
 Template Method. Defines the skeleton of an algorithm as an abstract class, allowing its sub-classes to provide concrete behavior.
 Visitor. Separates an algorithm from an object structure by moving the hierarchy of methods into one object.
+         A practical result of this separation is the ability to add new operations to existing object structures without modifying
+         those structures. It is one way to follow the open/closed principle.
 ________________________________________________________________________________________________________________________
