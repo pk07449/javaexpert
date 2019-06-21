@@ -27,8 +27,8 @@ public class Employee {
         this.type = type;
         this.address = address;
     }
-
-    @OneToOne(mappedBy = "address")
+    @OneToOne
+    @JoinColumn(name = "addressId")
     private Address address;
 
     public Integer getId() {

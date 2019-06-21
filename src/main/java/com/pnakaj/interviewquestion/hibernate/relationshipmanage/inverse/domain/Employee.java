@@ -31,6 +31,7 @@ public class Employee {
 
 
     @OneToOne
+    @JoinColumn(name = "addressID")
     private Address address;
 
 
