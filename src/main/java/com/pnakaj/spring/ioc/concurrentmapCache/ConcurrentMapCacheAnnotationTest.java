@@ -1,6 +1,6 @@
 package com.pnakaj.spring.ioc.concurrentmapCache;
 
-//Unpublished Work © 2017 Deere & Company.
+
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

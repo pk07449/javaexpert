@@ -1,6 +1,6 @@
 package com.pnakaj.spring.ioc.primary;
 
-//Unpublished Work © 2017 Deere & Company.
+
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.annotation.Order;

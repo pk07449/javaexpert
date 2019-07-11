@@ -1,6 +1,6 @@
 package com.pnakaj.spring.ioc.factory.staticfacoty;
 
-//Unpublished Work © 2017 Deere & Company.
+
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

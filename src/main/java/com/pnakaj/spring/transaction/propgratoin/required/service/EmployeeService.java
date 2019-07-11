@@ -17,7 +17,7 @@ public class EmployeeService {
     @Autowired
     private GenericRepo genericRepo;
 
-    @Transactional(propagation = Propagation.REQUIRED)
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void saveEmployee(Employee employee) {
         genericRepo.save(employee);
     }

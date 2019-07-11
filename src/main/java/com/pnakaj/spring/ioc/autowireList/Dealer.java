@@ -1,6 +1,6 @@
 package com.pnakaj.spring.ioc.autowireList;
 
-//Unpublished Work © 2017 Deere & Company.
+
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;

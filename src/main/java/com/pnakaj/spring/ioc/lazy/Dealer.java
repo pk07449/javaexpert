@@ -1,6 +1,6 @@
 package com.pnakaj.spring.ioc.lazy;
 
-//Unpublished Work © 2017 Deere & Company.
+
 
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;

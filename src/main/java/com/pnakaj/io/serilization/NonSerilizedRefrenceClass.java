@@ -2,7 +2,7 @@ package com.pnakaj.io.serilization;
 
 import java.io.*;
 
-//Unpublished Work © 2017 Deere & Company.
+
 
 public class NonSerilizedRefrenceClass {
 
