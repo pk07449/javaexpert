@@ -15,7 +15,7 @@ public class WithoutAddSuperClassExceptionInSubClass {
 }
 
 class Hello {
-    public void m1()  {
+    public void m1() throws Exception  {
         System.out.println("Hello.m1");
     }
 }

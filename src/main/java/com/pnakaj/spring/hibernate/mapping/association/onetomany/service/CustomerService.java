@@ -29,7 +29,8 @@ public class CustomerService {
         customerRepo.saveOrder(order1);
 
         Customer customer = new Customer(null, "pankaj", "permanent", new HashSet<>(Arrays.asList(order1, orders)));
-        customerRepo.saveEmployee(customer);
+//        customerRepo.saveEmployee(customer);
+        customerRepo.saveOrUpdateEmployee(customer);
 
     }
 }

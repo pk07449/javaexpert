@@ -22,6 +22,7 @@ public class Orders {
     private String city;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "customer_customerId")
     private Customer customer;
 
     public Customer getCustomer() {

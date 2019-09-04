@@ -29,9 +29,8 @@ public class Customer {
         this.orders = orders;
     }
 
-    @OneToMany(mappedBy = "customer")
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Orders> orders;
-
 
     public Integer getCustomerId() {
         return customerId;

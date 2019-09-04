@@ -22,12 +22,8 @@ public class CustomerRepo {
 
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void saveEmployee(Customer customer) {
-
         Session currentSession = sessionFactory.getCurrentSession();
-        Transaction transaction = currentSession.beginTransaction();
         currentSession.save(customer);
-        transaction.commit();
-
     }
 
 
