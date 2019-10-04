@@ -69,11 +69,11 @@ public class AccountServiceImpl implements AccountService{
 
     public boolean transfer(int amount, int sourceAccNo, int destAccNo) {
 
-        if(!masterData.stream().anyMatch(account -> account.getNumber() == destAccNo)){
+        if(masterData.stream().noneMatch(account -> account.getNumber() == destAccNo)){
             throw new InvalidAccount();
         };
 
-        if(!accounts.stream().anyMatch(account -> account.getNumber()== sourceAccNo && account.getAmount() > amount)){
+        if(accounts.stream().noneMatch(account -> account.getNumber()== sourceAccNo && account.getAmount() > amount)){
             throw new BadRequest();
         };
 
