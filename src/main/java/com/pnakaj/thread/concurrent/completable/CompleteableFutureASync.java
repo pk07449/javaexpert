@@ -1,4 +1,4 @@
-package com.pnakaj.thread;
+package com.pnakaj.thread.concurrent.completable;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
