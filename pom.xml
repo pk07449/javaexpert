@@ -23,7 +23,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <spring.security.version>4.0.2.RELEASE</spring.security.version>
+        <spring.security.version>5.4.2</spring.security.version>
         <!-- Spring -->
         <spring-framework.version>4.2.4.RELEASE</spring-framework.version>
 
