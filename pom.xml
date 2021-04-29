@@ -174,7 +174,7 @@
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-s3</artifactId>
-            <version>1.11.264</version>
+            <version>1.11.1007</version>
         </dependency>
 
 
